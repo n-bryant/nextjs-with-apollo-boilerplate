@@ -1,0 +1,66 @@
+{
+  "name": "nextjs",
+  "version": "4.0.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next -p 7777",
+    "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:sort-package-json",
+    "lint:eslint": "eslint . --cache --ext .js,.jsx --fix",
+    "lint:prettier": "prettier '**/*.{css,scss,sass,less,json,yml,yaml,html,md,mdx,vue,ts,tsx,gql,graphql}' --write",
+    "lint:sort-package-json": "sort-package-json",
+    "start": "next start"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ],
+    "transform": {
+      "\\.(gql|graphql)$": "jest-transform-graphql",
+      ".*": "babel-jest"
+    }
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.5",
+    "@material-ui/core": "latest",
+    "@mdi/js": "^4.7.95",
+    "@mdi/react": "^1.2.1",
+    "@n_bryant/classnames-helper": "^1.1.0",
+    "apollo-boost": "^0.4.7",
+    "apollo-cache-inmemory": "^1.6.5",
+    "apollo-client": "^2.6.8",
+    "babel-plugin-styled-components": "^1.10.6",
+    "clsx": "latest",
+    "dotenv": "^8.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "formik": "^2.0.8",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "next": "latest",
+    "next-with-apollo": "^4.3.0",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.7.2",
+    "react": "latest",
+    "react-apollo": "^3.1.3",
+    "react-dom": "latest",
+    "react-jss": "^10.0.0",
+    "react-transition-group": "^4.3.0",
+    "webpack": "^4.41.3"
+  },
+  "devDependencies": {
+    "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "enzyme-to-json": "^3.4.3",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "graphql-tools": "^4.0.6",
+    "jest": "^24.9.0",
+    "jest-transform-graphql": "^2.1.0",
+    "prettier": "^1.19.1",
+    "react-scripts": "^3.3.0",
+    "sort-package-json": "^1.31.0"
+  }
+}
