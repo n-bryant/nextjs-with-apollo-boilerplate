@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BoilerplateApp should render successfully 1`] = `
+<Fragment>
+  <CssBaseline />
+  <NextNProgress
+    color="red"
+    height={3}
+    startPosition={0.3}
+    stopDelayMs={200}
+  />
+  <ApolloProvider
+    client={[MockFunction]}
+  >
+    <WithStyles(Page)
+      classes={Object {}}
+    >
+      <Component />
+    </WithStyles(Page)>
+  </ApolloProvider>
+</Fragment>
+`;
