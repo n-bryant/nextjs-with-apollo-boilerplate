@@ -5,6 +5,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next -p 7777",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
     "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:sort-package-json",
     "lint:eslint": "eslint . --cache --ext .js,.jsx --fix",
     "lint:prettier": "prettier '**/*.{css,scss,sass,less,json,yml,yaml,html,md,mdx,vue,ts,tsx,gql,graphql}' --write",
@@ -12,7 +14,9 @@
     "start": "next start"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
     "testPathIgnorePatterns": [
       "<rootDir>/.next/",
       "<rootDir>/node_modules/"
